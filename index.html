@@ -20,113 +20,674 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1822079619163002&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join Telegram Channel</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .elementor img {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    height: auto;
-    max-width: 100%;
-    border-radius: 90px;
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Join Telegram Channel</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+*{
+    box-sizing:border-box;
 }
-    .card {
-      backdrop-filter: blur(12px);
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 1rem;
-      padding: 2rem;
-      max-width: 400px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+html,
+body{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Poppins','Segoe UI',sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:18px 14px 30px;
+    color:#fff;
+    background:
+        radial-gradient(circle at 15% 10%,rgba(34,197,94,.13),transparent 28%),
+        radial-gradient(circle at 85% 15%,rgba(99,102,241,.18),transparent 30%),
+        radial-gradient(circle at 50% 100%,rgba(6,182,212,.12),transparent 35%),
+        #020617;
+}
+
+.elementor img{
+    border:none;
+    border-radius:0;
+    box-shadow:none;
+    height:auto;
+    max-width:100%;
+}
+
+/* MAIN CARD */
+
+.card{
+    width:100%;
+    max-width:440px;
+    padding:25px 21px;
+    text-align:center;
+    border-radius:26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30,41,59,.88),
+            rgba(15,23,42,.76)
+        );
+
+    border:1px solid rgba(255,255,255,.09);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.42),
+        inset 0 1px rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:190px;
+    height:190px;
+    top:-115px;
+    right:-80px;
+    border-radius:50%;
+    background:#06b6d4;
+    opacity:.08;
+    filter:blur(18px);
+    pointer-events:none;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    width:160px;
+    height:160px;
+    bottom:-110px;
+    left:-80px;
+    border-radius:50%;
+    background:#6366f1;
+    opacity:.08;
+    filter:blur(20px);
+    pointer-events:none;
+}
+
+/* PROFILE IMAGE */
+
+.profile-wrap{
+    width:112px;
+    height:112px;
+    margin:0 auto 18px;
+    padding:4px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #06b6d4,
+            #6366f1
+        );
+
+    box-shadow:
+        0 0 30px rgba(6,182,212,.18),
+        0 15px 35px rgba(0,0,0,.35);
+
+    position:relative;
+    z-index:1;
+}
+
+.profile-wrap img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #0f172a;
+}
+
+/* HEADING */
+
+.main-heading{
+    position:relative;
+    z-index:1;
+
+    font-size:21px;
+    line-height:1.3;
+    font-weight:800;
+    letter-spacing:-.3px;
+
+    color:#f8fafc;
+
+    margin-bottom:8px;
+}
+
+.experience{
+    position:relative;
+    z-index:1;
+
+    margin-bottom:19px;
+
+    color:#f87171;
+    font-size:13px;
+    font-weight:700;
+}
+
+/* CTA */
+
+.btn-telegram{
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    width:100%;
+    min-height:56px;
+
+    padding:13px 18px;
+
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:15px;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            100deg,
+            #0088cc,
+            #06b6d4,
+            #3b82f6
+        );
+
+    box-shadow:
+        0 12px 30px rgba(6,182,212,.22),
+        inset 0 1px rgba(255,255,255,.25);
+
+    font-size:16px;
+    font-weight:800;
+
+    cursor:pointer;
+    text-decoration:none;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        opacity .2s ease;
+
+    overflow:hidden;
+}
+
+.btn-telegram::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+    animation:shine 3.5s infinite;
+}
+
+@keyframes shine{
+    0%{left:-100%}
+    45%{left:130%}
+    100%{left:130%}
+}
+
+.btn-telegram:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 16px 38px rgba(6,182,212,.3),
+        inset 0 1px rgba(255,255,255,.25);
+}
+
+.btn-telegram:active{
+    transform:scale(.98);
+}
+
+.btn-telegram.preparing{
+    background:
+        linear-gradient(
+            100deg,
+            #334155,
+            #475569
+        );
+
+    box-shadow:none;
+    cursor:default;
+}
+
+.btn-telegram.success{
+    background:
+        linear-gradient(
+            100deg,
+            #0088cc,
+            #06b6d4
+        );
+}
+
+/* CTA TEXT */
+
+.cta-main{
+    display:block;
+}
+
+.cta-sub{
+    display:block;
+    margin-top:2px;
+    font-size:10px;
+    font-weight:500;
+    opacity:.8;
+}
+
+/* SECTION DIVIDER */
+
+.section-divider{
+    height:1px;
+    margin:22px 0 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.09),
+            transparent
+        );
+}
+
+/* FEATURE HEADING */
+
+.profit-title{
+    position:relative;
+    z-index:1;
+
+    margin-bottom:15px;
+
+    color:#f87171;
+    font-size:14px;
+    font-weight:800;
+}
+
+/* FEATURES */
+
+.features{
+    position:relative;
+    z-index:1;
+
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+
+    margin-bottom:21px;
+}
+
+.feature{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+
+    padding:11px 12px;
+
+    text-align:left;
+
+    border-radius:13px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.055);
+
+    color:#cbd5e1;
+
+    font-size:12px;
+    line-height:1.45;
+
+    transition:.2s ease;
+}
+
+.feature:hover{
+    background:rgba(255,255,255,.055);
+    border-color:rgba(255,255,255,.09);
+}
+
+.feature-icon{
+    width:25px;
+    height:25px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:8px;
+
+    background:rgba(6,182,212,.1);
+
+    font-size:12px;
+}
+
+.feature b{
+    color:#f8fafc;
+}
+
+/* HINDI SECTION */
+
+.hindi-section{
+    position:relative;
+    z-index:1;
+
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.hindi-section h2{
+    color:#f8fafc;
+    font-size:16px;
+    line-height:1.45;
+    margin-bottom:8px;
+}
+
+.hindi-section p{
+    color:#f87171;
+    font-size:12px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:380px){
+
+    body{
+        padding:12px 10px;
     }
-    .btn-telegram {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 0.8rem 1.2rem;
-      border-radius: 0.75rem;
-      font-weight: bold;
-      color: white;
-      background: linear-gradient(90deg, #0088cc, #00bcd4);
-      transition: 0.3s;
-      width: 100%;
+
+    .card{
+        padding:21px 16px;
     }
-    .btn-telegram:hover {
-      background: linear-gradient(90deg, #00bcd4, #0088cc);
-      transform: translateY(-2px);
+
+    .main-heading{
+        font-size:19px;
     }
-    .feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      font-size: 0.95rem;
+
+    .profile-wrap{
+        width:100px;
+        height:100px;
     }
-  </style>
+
+    .btn-telegram{
+        font-size:15px;
+    }
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <div class="card">
-    <!-- Profile Image -->
-    <div class="w-32 h-32 mx-auto mb-4 ">
-      <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image.jpg" alt="Profile" class="w-full h-full rounded-full object-cover shadow-lg border-4 border-white rounded-xxl">
+<div class="card">
+
+```
+<!-- Profile Image -->
+
+<div class="profile-wrap">
+
+    <img
+        src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image.jpg"
+        alt="Profile"
+    >
+
+</div>
+
+
+<!-- Heading -->
+
+<h1 class="main-heading">
+  PANKAJ BHARDWAJ OFFICIAL(SEBI REGISTER) 💸🏆
+</h1>
+
+
+<!-- Experience -->
+
+<p class="experience">
+    📊 10+ years experience 📊
+</p>
+
+
+<!-- CTA Button -->
+
+<button
+    type="button"
+    id="telegramBtn"
+    class="btn-telegram"
+    onclick="prepareTelegram()"
+>
+
+    <span class="cta-main" id="ctaMain">
+        💬 JOIN TELEGRAM
+    </span>
+
+    <span class="cta-sub" id="ctaSub">
+        Tap to continue
+    </span>
+
+</button>
+
+
+<!-- Divider -->
+
+<div class="section-divider"></div>
+
+
+<!-- Features -->
+
+<p class="profit-title">
+    💎 DAILY PROFIT GURANTEE 💎
+</p>
+
+
+<div class="features">
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            📊
+        </div>
+
+        <span>
+            <b>Live Daily Trades</b> – From my portfolio to yours!
+        </span>
+
     </div>
 
-    <!-- Heading -->
-    <h1 class="text-xl font-extrabold text-gray-800 mb-1">
-      PANKAJ BHARDWAJ OFFICIAL(SEBI REGISTER) 💸🏆
-    </h1>
 
-    <!-- Experience -->
-    <p class="text-red-600 font-semibold mb-4">📊 17 years experience 📊</p>
+    <div class="feature">
 
-    <!-- CTA Button -->
-    <a href="https://t.me/+dlGtR5yw6341ZmNl" target="_blank" class="btn-telegram mb-6">
+        <div class="feature-icon">
+            🔥
+        </div>
 
-      
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
-      </svg>
-      JOIN TELEGRAM 💬
-    </a>
+        <span>
+            <b>Exclusive Signals</b> – Get the same trades I take!
+        </span>
 
-    <!-- Features -->
-    <p class="text-red-600 font-bold mb-4">💎 DAILY PROFIT GURANTEE 💎</p>
-    <div class="text-left space-y-3 text-gray-800 mb-6">
-      <div class="feature">📊 <span><b>Live Daily Trades</b> – From my portfolio to yours!</span></div>
-      <div class="feature">🔥 <span><b>Exclusive Signals</b> – Get the same trades I take!</span></div>
-      <div class="feature">💯 <span><b>High Accuracy</b> – Consistent proven strategy!</span></div>
-      <div class="feature">💡 <span><b>Real-Time Updates</b> – Instant market alerts!</span></div>
     </div>
 
-    <!-- Hindi Section -->
-    <h2 class="text-lg font-bold text-gray-800 mb-2">क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?</h2>
-    <p class="text-red-600 font-semibold">
-      अगर हां तो दिए गए टेलीग्राम बटन पर दबाएं !
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            💯
+        </div>
+
+        <span>
+            <b>High Accuracy</b> – Consistent proven strategy!
+        </span>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            💡
+        </div>
+
+        <span>
+            <b>Real-Time Updates</b> – Instant market alerts!
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- Hindi Section -->
+
+<div class="hindi-section">
+
+    <h2>
+        क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
+    </h2>
+
+    <p>
+        अगर हां तो दिए गए टेलीग्राम बटन पर दबाएं !
     </p>
-  </div>
+
+</div>
+```
+
+</div>
+
+<script>
+
+const TELEGRAM_URL =
+    "https://t.me/+dlGtR5yw6341ZmNl";
+
+let countdownRunning = false;
+
+
+function prepareTelegram(){
+
+    if(countdownRunning){
+        return;
+    }
+
+    countdownRunning = true;
+
+    const button =
+        document.getElementById("telegramBtn");
+
+    const main =
+        document.getElementById("ctaMain");
+
+    const sub =
+        document.getElementById("ctaSub");
+
+
+    button.classList.add("preparing");
+
+    button.disabled = true;
+
+    let count = 3;
+
+
+    main.innerText =
+        "Preparing...";
+
+    sub.innerText =
+        "Please wait " + count + " seconds";
+
+
+    const timer =
+        setInterval(function(){
+
+            count--;
+
+
+            if(count > 0){
+
+                main.innerText =
+                    "Preparing...";
+
+                sub.innerText =
+                    "Please wait " + count + " seconds";
+
+            }
+            else{
+
+                clearInterval(timer);
+
+
+                main.innerText =
+                    "✓ Opening Telegram";
+
+                sub.innerText =
+                    "Redirecting you now...";
+
+
+                button.classList.remove("preparing");
+
+                button.classList.add("success");
+
+
+                setTimeout(function(){
+
+                    window.open(
+                        TELEGRAM_URL,
+                        "_blank"
+                    );
+
+
+                    setTimeout(function(){
+
+                        countdownRunning = false;
+
+                        button.disabled = false;
+
+                        button.classList.remove("success");
+
+                        main.innerText =
+                            "💬 JOIN TELEGRAM";
+
+                        sub.innerText =
+                            "Tap to continue";
+
+                    },1500);
+
+                },400);
+
+            }
+
+        },1000);
+
+}
+
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
